@@ -12,7 +12,7 @@ router = APIRouter(prefix="/predict", tags=["Diabetes"])
 xgb_model, transformer, static_mean, static_std = load_models()
 
 def call_gemini_api(temp_data: dict, prediction: int, disease: str):
-    GEMINI_API_KEY = "my gemini key"  # 🔑 replace with env variable in production
+    GEMINI_API_KEY = "AIzaSyBSxSAksIjBg5RzoU0RK3HBO0aTIiP0SUw"  # 🔑 replace with env variable in production
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key={GEMINI_API_KEY}"
 # Make sure to import the json library
 
